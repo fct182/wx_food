@@ -1,0 +1,4 @@
+<!--主页列表内容详情页-->
+<view class="title">{{detailData.title}}</view>
+<image class="img" src="{{detailData.image}}"></image>
+<view class="detail">{{detailData.detail}}</view>

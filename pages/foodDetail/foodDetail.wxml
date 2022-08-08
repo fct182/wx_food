@@ -1,0 +1,16 @@
+<!-- 商品详情页 -->
+<view class="foodBox">
+  <view class="title">{{projoctData.name}}</view>
+  <image src="{{projoctData.pic}}"></image>
+  <view class="price">价格: <text>{{projoctData.price}}</text> 元</view>
+  <view class="content">{{projoctData.details}}</view>
+</view>
+
+<!-- 加入购物车布局 -->
+<view class="bottom">
+  <view class="img" bindtap="goMyCart">
+  <image src="../../images/tab9.png" alt=""/>
+  </view>
+  <view class="addShop" bindtap="addCart">加入购物车</view>
+  <view class="buy-now">直接购买</view>
+</view>

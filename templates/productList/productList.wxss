@@ -1,0 +1,43 @@
+.list{
+  margin-top: 20rpx;
+  background: #fff;
+  display: flex;
+  padding: 15rpx;
+}
+.img image{
+  width: 184rpx;
+  height: 184rpx;
+}
+.info{
+  flex: 1;
+  margin-left: 20rpx;
+  position: relative;
+}
+.info-title{
+  width: 520rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10rpx;
+}
+.info-desc{
+  font-size: 26rpx;
+  color: #666;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info-bottom{
+  position: absolute;
+  bottom: 10rpx;
+  left: 20rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.info-bottom text{
+  color: red;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,16 @@
+<template name="productList">
+  <navigator url="../foodDetail/foodDetail?id={{id}}">
+    <view class="list">
+      <view class="img">
+        <image src="{{pic}}"></image>
+      </view>
+      <view class="info">
+        <view class="info-title">{{name}}</view>
+        <view class="info-desc">{{description}}</view>
+        <view class="info-bottom">
+          <text>￥{{price}}</text>{{buynum}}人付款
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>

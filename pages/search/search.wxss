@@ -1,0 +1,26 @@
+/* pages/search/search.wxss */
+@import "../../templates/productList/productList.wxss";
+page{
+  background: #f5f5f5;
+}
+.search{
+  padding: 20rpx;
+  background: #fff;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.search input{
+  background: #f5f5f5;
+  padding: 10rpx;
+  padding-left: 30rpx;
+  border-radius: 20rpx;
+}
+.tips{
+  text-align: center;
+  margin: 14rpx 0;
+  padding: 10rpx;
+  background: #fff;
+  color: #666;
+}

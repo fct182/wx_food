@@ -1,0 +1,24 @@
+<!-- 1.获取头像和昵称，通过组件标签 -->
+<view class="one">
+  <open-data class="userImg" type="userAvatarUrl"></open-data>
+  <open-data type="userNickName"></open-data>
+  <button size="mini">点击登录</button>
+</view>
+
+<!-- 2.获取头像和昵称,button事件 -->
+<view class="two">
+  <button bindtap="getUserInfo" wx:if="{{flag}}">点击获取头像</button>
+  <view wx:else class="box">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+</view>
+
+<!-- 3.获取头像和昵称,登录 -->
+<!-- <view class="two">
+  <button bindtap="getUserInfo2" wx:if="{{flag}}">点击获取头像</button>
+  <view wx:else class="box">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+</view> -->

@@ -1,0 +1,4 @@
+<!--pages/complete/complete.wxml-->
+<view class="header">
+  <text>恭喜你购买成功！</text>
+</view>

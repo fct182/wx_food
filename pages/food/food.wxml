@@ -1,0 +1,20 @@
+<!--顶部布局-->
+<view class="header">
+  <navigator hover-class="none" url="../city/city" class="location">{{location}}</navigator>
+  <view class="inp">
+    <navigator url="../search/search">请输入你想要的内容</navigator>
+  </view>
+</view>
+<!-- 分类 -->
+<view class="navBar">
+  <view class="item" wx:for="{{navBarData}}" wx:key="index" data-type="{{item.id}}" bindtap="foodListHandle">
+    <image src="{{item.imgUrl}}"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>
+<!-- 列表 -->
+<import src="../../templates/productList/productList.wxml" />
+<view wx:for="{{productList}}" wx:key="index">
+  <template is="productList" data="{{...item}}"></template>
+</view>
+<view class="bottom-tips" wx:if="{{msg}}">暂无数据</view>

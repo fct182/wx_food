@@ -1,0 +1,56 @@
+/* pages/food/food.wxss */
+@import "../../templates/productList/productList.wxss";
+page{
+  background: #f5f5f5;
+}
+/* 顶部 */
+.header{
+  background: #fff;
+  padding: 20rpx 10rpx;
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.location{
+  width: 100rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.inp{
+  flex: 1;
+  margin-left: 10rpx;
+}
+.inp navigator{
+  background: #f5f5f5;
+  border-radius: 20rpx;
+  padding-left: 30rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+/* 分类 */
+.navBar{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 10rpx;
+  flex-wrap: wrap;
+}
+.item{
+  width: 25%;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #555;
+}
+.item image{
+  width: 74rpx;
+  height: 74rpx;
+}
+
+.bottom-tips{
+  text-align: center;
+  margin: 14rpx 0;
+  padding: 10rpx;
+  background: #fff;
+  color: #666;
+}

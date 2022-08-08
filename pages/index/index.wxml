@@ -1,0 +1,36 @@
+<!-- 1.轮播图 -->
+<view class="banner">
+  <swiper autoplay interval="3000" circular bindchange="swiperHandle">
+    <swiper-item wx:for="{{bannerData}}" wx:key="index">
+      <image src="{{item.image}}"></image>
+      <view class="banner-info">{{item.title}}</view>
+    </swiper-item>
+  </swiper>
+  <view class="banner-num">
+    <text>{{currentBanner}}/{{bannerData.length}}</text>
+  </view>
+</view>
+<!-- 2.每日一测 -->
+<view class="oneDay">
+  <view class="item">
+    <image src="../../images/info_left.jpg"></image>
+    <view>每日一测</view>
+  </view>
+  <view class="item">
+    <image src="../../images/info_right.jpg"></image>
+    <view>每日食谱</view>
+  </view>
+</view>
+<!-- 3.内容信息 -->
+<view class="contentList">
+  <view class="list" wx:for="{{listData}}" wx:key="index" data-id="{{item.id}}" bindtap="goToDetail">
+    <view class="title">{{item.title}}</view>
+    <view class="list-box">
+      <image src="{{item.image}}"></image>
+      <view class="info">
+        <view class="content">{{item.desc}}</view>
+        <view class="view-num"><text>{{item.readNum}}</text>次阅读</view>
+      </view>
+    </view>
+  </view>
+</view>

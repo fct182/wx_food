@@ -1,0 +1,39 @@
+<view bindtouchstart="touchStart" bindtouchmove="touchMove" class="list {{item.active?'touch-move':''}}"
+  wx:for="{{cartData}}" wx:key="index" data-index="{{index}}">
+  <view class="item">
+    <view class="circle">
+      <icon data-index="{{index}}" bindtap="selectList" wx:if="{{item.isSelected}}" type="success"></icon>
+      <icon data-index="{{index}}" wx:else type="circle" bindtap="selectList" color="#999"></icon>
+    </view>
+    <view class="img">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="content">
+      <view class="title">{{item.name}}</view>
+      <view class="desc">{{item.info}}</view>
+      <view class="bottom">
+        <text class="price">￥{{item.price}}</text>
+        <view class="edit">
+          <text class="reduce" bindtap="changeNum" data-index="{{index}}" data-value="reduce">-</text>
+          <text class="num">{{item.num}}</text>
+          <text class="add" bindtap="changeNum" data-index="{{index}}">+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="delete" data-index="{{index}}" bindtap="deleteProduct">删除</view>
+</view>
+
+<!-- 占位 -->
+<view class='gao'></view>
+
+<!-- 全选布局 -->
+<view class='myCart-bottom'>
+  <view class="selectedAll">
+    <icon bindtap='seletedAll' wx:if='{{isSeletedAll}}' type='success' color="#43bf92"></icon>
+    <icon bindtap='seletedAll' wx:else type='circle' color="#999"></icon>
+    <text>全选</text>
+  </view>
+  <view class='heji'>合计：<text>{{totalPrice}}</text></view>
+  <view class='jiesuan {{selectedNum>0?"acitveAll":""}}' bindtap="{{selectedNum>0?'toBuy':''}}">结算:{{totalPrice}}</view>
+</view>
